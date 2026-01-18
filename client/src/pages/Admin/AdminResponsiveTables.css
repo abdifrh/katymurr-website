@@ -1,0 +1,148 @@
+/* Global Responsive Table Styles for Admin Dashboard */
+
+/* Desktop: Ensure tables are scrollable horizontally if needed */
+.wp-admin-table-container {
+  position: relative;
+}
+
+.wp-admin-table-wrapper {
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 100%;
+}
+
+.wp-admin-table-wrapper::-webkit-scrollbar {
+  height: 10px;
+}
+
+.wp-admin-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.wp-admin-table-wrapper::-webkit-scrollbar-thumb {
+  background: #9A4818;
+  border-radius: 5px;
+}
+
+.wp-admin-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #7a3a14;
+}
+
+/* Responsive Table Container */
+@media (max-width: 782px) {
+  .wp-admin-table-container {
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+  }
+
+  .wp-admin-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide table headers on mobile */
+  .wp-list-table thead {
+    display: none;
+  }
+
+  /* Convert table rows to cards on mobile */
+  .wp-list-table tbody tr {
+    display: block;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+
+  .wp-list-table tbody tr:hover {
+    box-shadow: 0 4px 12px rgba(154, 72, 24, 0.15);
+    border-color: #9A4818;
+  }
+
+  .wp-list-table tbody tr:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Convert table cells to flex layout */
+  .wp-list-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    text-align: right;
+    min-height: 48px; /* Touch target size */
+    word-break: break-word;
+  }
+
+  .wp-list-table tbody td:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Add labels using data-label attribute */
+  .wp-list-table tbody td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #1d2327;
+    text-align: left;
+    flex: 0 0 35%;
+    margin-right: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  /* Special handling for action columns */
+  .wp-list-table tbody td.column-actions:before {
+    content: 'Actions';
+  }
+
+  /* Remove column width constraints on mobile */
+  .column-title,
+  .column-slug,
+  .column-language,
+  .column-actions,
+  .column-name,
+  .column-email,
+  .column-subject,
+  .column-date,
+  .column-status,
+  .column-order,
+  .column-label,
+  .column-url,
+  .column-type,
+  .column-visible {
+    width: auto;
+  }
+
+  /* Table header adjustments */
+  .wp-admin-table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  /* Filter controls responsive */
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .filter-controls select {
+    width: 100%;
+    min-width: auto;
+  }
+}
+

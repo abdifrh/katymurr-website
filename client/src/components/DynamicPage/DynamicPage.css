@@ -1,0 +1,121 @@
+.dynamic-page {
+  background-color: var(--color-white);
+}
+
+.dynamic-content {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.dynamic-content h1,
+.dynamic-content h2,
+.dynamic-content h3,
+.dynamic-content h4 {
+  color: var(--color-dark);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.dynamic-content h1 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+}
+
+.dynamic-content h2 {
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
+.dynamic-content h3 {
+  font-size: 1.5rem;
+}
+
+.dynamic-content p {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+}
+
+.dynamic-content a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.dynamic-content a:hover {
+  color: var(--color-warm);
+}
+
+.dynamic-content ul,
+.dynamic-content ol {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+
+.dynamic-content li {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-dark);
+}
+
+.dynamic-content strong {
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.dynamic-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: var(--spacing-md) 0;
+}
+
+/* Layout avec image à gauche et texte à droite */
+.page-content-with-image {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+.page-image {
+  position: sticky;
+  top: 100px;
+}
+
+.page-featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-text {
+  min-width: 0; /* Permet au texte de se rétrécir si nécessaire */
+}
+
+@media (max-width: 768px) {
+  .page-content-with-image {
+    grid-template-columns: 1fr;
+  }
+
+  .page-image {
+    position: static;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .dynamic-content {
+    font-size: 1rem;
+  }
+
+  .dynamic-content h1 {
+    font-size: 2rem;
+  }
+
+  .dynamic-content h2 {
+    font-size: 1.5rem;
+  }
+}
+

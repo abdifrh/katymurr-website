@@ -1,0 +1,263 @@
+/* WordPress-style Admin Contact Messages */
+@import './AdminPagesEnhanced.css';
+
+.admin-contact {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.wp-admin-loading {
+  padding: 20px;
+  text-align: center;
+  color: #646970;
+}
+
+.unread-count {
+  color: #9A4818;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.filter-controls select {
+  min-width: 180px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #c3c4c7;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.filter-controls select:focus {
+  border-color: #9A4818;
+  box-shadow: 0 0 0 2px rgba(154, 72, 24, 0.1);
+  outline: none;
+}
+
+.contact-messages-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  padding: 24px;
+}
+
+.messages-list {
+  min-width: 0;
+}
+
+.message-detail {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-radius: 8px;
+  padding: 24px;
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.message-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #c3c4c7;
+}
+
+.message-detail-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.message-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.message-field strong {
+  color: #1d2327;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.message-field span,
+.message-field a {
+  color: #646970;
+  font-size: 14px;
+}
+
+.message-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.message-text {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #c3c4c7;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.6;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.message-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #c3c4c7;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.status-new {
+  background-color: #9A4818;
+  color: #fff;
+}
+
+.status-badge.status-read {
+  background-color: #dcdcde;
+  color: #2c3338;
+}
+
+.status-badge.status-replied {
+  background-color: #00a32a;
+  color: #fff;
+}
+
+.wp-list-table tbody tr.unread {
+  background-color: #fff3cd;
+  font-weight: 500;
+}
+
+.wp-list-table tbody tr.unread:hover {
+  background-color: #ffe69c;
+}
+
+.column-name {
+  width: 15%;
+}
+
+.column-email {
+  width: 20%;
+}
+
+.column-subject {
+  width: 25%;
+}
+
+.column-date {
+  width: 15%;
+}
+
+.column-status {
+  width: 10%;
+}
+
+.column-actions {
+  width: 15%;
+}
+
+@media (max-width: 1200px) {
+  .contact-messages-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .message-detail {
+    position: static;
+    max-height: none;
+  }
+}
+
+/* Responsive Table Styles */
+@media (max-width: 782px) {
+  .wp-admin-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wp-list-table thead {
+    display: none;
+  }
+
+  .wp-list-table tbody tr {
+    display: block;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #fff;
+  }
+
+  .wp-list-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f1;
+    text-align: right;
+  }
+
+  .wp-list-table tbody td:last-child {
+    border-bottom: none;
+  }
+
+  .wp-list-table tbody td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #1d2327;
+    text-align: left;
+    flex: 0 0 40%;
+  }
+
+  .contact-messages-layout {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .message-detail {
+    padding: 15px;
+  }
+
+  .message-actions {
+    flex-direction: column;
+  }
+
+  .message-actions .button {
+    width: 100%;
+  }
+}
+

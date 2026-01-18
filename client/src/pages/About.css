@@ -1,0 +1,136 @@
+.about-page {
+  background-color: var(--color-white);
+}
+
+.page-header {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.about-content {
+  padding: var(--spacing-xl) 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+.about-image {
+  position: sticky;
+  top: 100px;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: var(--color-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--color-dark);
+  opacity: 0.5;
+}
+
+.about-text h2 {
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-subtitle {
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.about-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-body p {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+}
+
+.about-body p:last-child {
+  margin-bottom: 0;
+}
+
+.about-cta {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-cream);
+  text-align: center;
+}
+
+.about-cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-cta-text {
+  font-size: 1.2rem;
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 500;
+}
+
+.about-cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-cta-buttons .btn {
+  padding: 1rem 2.25rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  text-decoration: none;
+  border-radius: 6px !important;
+  transition: all var(--transition-fast);
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 48px !important;
+}
+
+.about-cta-buttons .btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.about-cta-buttons .btn-primary:hover {
+  background-color: var(--color-warm);
+  transform: translateY(-2px);
+}
+
+.about-cta-buttons .btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.about-cta-buttons .btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    position: static;
+  }
+
+  .work-items {
+    grid-template-columns: 1fr;
+  }
+}
+

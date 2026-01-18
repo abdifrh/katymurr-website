@@ -1,0 +1,90 @@
+/* Animated Section Base Styles */
+.animated-section {
+  opacity: 0;
+  transition: opacity var(--animation-duration, 0.6s) ease-out,
+              transform var(--animation-duration, 0.6s) ease-out;
+}
+
+.animated-section.animate-hidden {
+  opacity: 0;
+}
+
+/* Fade In */
+.animated-section.animate-fadeIn {
+  opacity: 1;
+}
+
+/* Fade In Up */
+.animated-section.animate-fadeInUp {
+  transform: translateY(30px);
+}
+
+.animated-section.animate-fadeInUp.animate-fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade In Down */
+.animated-section.animate-fadeInDown {
+  transform: translateY(-30px);
+}
+
+.animated-section.animate-fadeInDown.animate-fadeInDown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade In Left */
+.animated-section.animate-fadeInLeft {
+  transform: translateX(-30px);
+}
+
+.animated-section.animate-fadeInLeft.animate-fadeInLeft {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade In Right */
+.animated-section.animate-fadeInRight {
+  transform: translateX(30px);
+}
+
+.animated-section.animate-fadeInRight.animate-fadeInRight {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide In Up */
+.animated-section.animate-slideInUp {
+  transform: translateY(50px);
+}
+
+.animated-section.animate-slideInUp.animate-slideInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scale In */
+.animated-section.animate-scaleIn {
+  transform: scale(0.9);
+}
+
+.animated-section.animate-scaleIn.animate-scaleIn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Apply delay */
+.animated-section {
+  animation-delay: var(--animation-delay, 0s);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animated-section {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+

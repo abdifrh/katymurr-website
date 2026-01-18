@@ -1,0 +1,104 @@
+.reference-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-left: 4px solid var(--color-warm);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.reference-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reference-testimonial {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.reference-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
+  line-height: 1.7;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: var(--spacing-xs) 0;
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+  font-family: var(--font-primary);
+  margin-top: var(--spacing-xs);
+  display: inline-block;
+}
+
+.read-more-btn:hover {
+  color: var(--color-warm);
+}
+
+.reference-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reference-author strong {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+}
+
+.reference-author .position,
+.reference-author .institution {
+  color: var(--color-dark);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.institution-logo {
+  margin-top: var(--spacing-sm);
+}
+
+.institution-logo {
+  max-width: 100px;
+  max-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.institution-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .reference-author {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .institution-logo {
+    margin-top: var(--spacing-sm);
+  }
+}
+

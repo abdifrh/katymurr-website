@@ -1,0 +1,150 @@
+.wp-admin-newsletter {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #f0f0f1;
+  background: linear-gradient(to bottom, #fafafa, #f6f7f7);
+  border-radius: 8px 8px 0 0;
+  padding: 0 4px;
+}
+
+.tab-button {
+  padding: 14px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #646970;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-bottom: -2px;
+}
+
+.tab-button:hover {
+  color: #9A4818;
+  background: rgba(154, 72, 24, 0.05);
+}
+
+.tab-button.active {
+  color: #9A4818;
+  border-bottom-color: #9A4818;
+  background: #fff;
+  font-weight: 600;
+}
+
+.newsletter-content {
+  padding: 24px;
+}
+
+.newsletter-content h2 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.wp-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.wp-list-table th,
+.wp-list-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #c3c4c7;
+}
+
+.wp-list-table th {
+  background: #f6f7f7;
+  font-weight: 600;
+  color: #1d2327;
+}
+
+.wp-admin-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 782px) {
+  .newsletter-tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab-button {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .newsletter-content {
+    padding: 15px;
+  }
+
+  .wp-admin-table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .wp-list-table {
+    font-size: 12px;
+  }
+
+  .wp-list-table th,
+  .wp-list-table td {
+    padding: 8px;
+  }
+
+  .wp-admin-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .wp-list-table thead {
+    display: none;
+  }
+
+  .wp-list-table tbody tr {
+    display: block;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #fff;
+  }
+
+  .wp-list-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f1;
+    text-align: right;
+  }
+
+  .wp-list-table tbody td:last-child {
+    border-bottom: none;
+  }
+
+  .wp-list-table tbody td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #1d2327;
+    text-align: left;
+    flex: 0 0 40%;
+  }
+}
+
