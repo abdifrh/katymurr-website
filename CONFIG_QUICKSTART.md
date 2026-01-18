@@ -8,8 +8,8 @@ Créez un fichier `.env` dans le dossier `server/` avec ce contenu :
 
 ```env
 # Supabase Configuration
-SUPABASE_URL=https://fyqwjbkjrcezzfzffqjp.supabase.co
-SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5cXdqYmtqcmNlenpmemZmcWpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg2NDM4MzMsImV4cCI6MjA4NDIxOTgzM30.DLJMxZSwwYB5JthwAuBtiZjlawO1sM5IRvvKZeUU_iE
+SUPABASE_URL=https://votre-projet.supabase.co
+SUPABASE_KEY=votre-service-role-key-ici
 
 # Server Configuration
 PORT=3001
@@ -29,8 +29,8 @@ Créez un fichier `.env` dans le dossier `client/` avec ce contenu :
 VITE_API_URL=http://localhost:3001/api
 
 # Supabase Configuration
-VITE_SUPABASE_URL=https://fyqwjbkjrcezzfzffqjp.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5cXdqYmtqcmNlenpmemZmcWpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg2NDM4MzMsImV4cCI6MjA4NDIxOTgzM30.DLJMxZSwwYB5JthwAuBtiZjlawO1sM5IRvvKZeUU_iE
+VITE_SUPABASE_URL=https://votre-projet.supabase.co
+VITE_SUPABASE_ANON_KEY=votre-anon-key-ici
 ```
 
 ## 3. Commandes Rapides (PowerShell)
@@ -41,8 +41,8 @@ Vous pouvez créer ces fichiers rapidement avec ces commandes :
 ```powershell
 @"
 # Supabase Configuration
-SUPABASE_URL=https://fyqwjbkjrcezzfzffqjp.supabase.co
-SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5cXdqYmtqcmNlenpmemZmcWpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg2NDM4MzMsImV4cCI6MjA4NDIxOTgzM30.DLJMxZSwwYB5JthwAuBtiZjlawO1sM5IRvvKZeUU_iE
+SUPABASE_URL=https://votre-projet.supabase.co
+SUPABASE_KEY=votre-service-role-key-ici
 
 # Server Configuration
 PORT=3001
@@ -61,8 +61,8 @@ JWT_SECRET=changez_cette_valeur_en_production
 VITE_API_URL=http://localhost:3001/api
 
 # Supabase Configuration
-VITE_SUPABASE_URL=https://fyqwjbkjrcezzfzffqjp.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ5cXdqYmtqcmNlenpmemZmcWpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg2NDM4MzMsImV4cCI6MjA4NDIxOTgzM30.DLJMxZSwwYB5JthwAuBtiZjlawO1sM5IRvvKZeUU_iE
+VITE_SUPABASE_URL=https://votre-projet.supabase.co
+VITE_SUPABASE_ANON_KEY=votre-anon-key-ici
 "@ | Out-File -FilePath "client\.env" -Encoding utf8
 ```
 
