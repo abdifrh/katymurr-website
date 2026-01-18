@@ -53,6 +53,20 @@ Suivez les instructions pour vous connecter avec GitHub.
 
 ### 2.3 Déployer le Frontend
 
+**Option A : Via le Dashboard Vercel (Recommandé)**
+
+1. Allez sur [vercel.com/dashboard](https://vercel.com/dashboard)
+2. Cliquez sur **"Add New..."** → **"Project"**
+3. Importez votre repository GitHub `katymurr-website`
+4. **Configuration importante** :
+   - **Framework Preset** : Vite (détecté automatiquement)
+   - **Root Directory** : `client` ⚠️ **TRÈS IMPORTANT**
+   - **Build Command** : `npm run build` (automatique)
+   - **Output Directory** : `dist` (automatique)
+5. Cliquez sur **"Deploy"**
+
+**Option B : Via Vercel CLI**
+
 ```powershell
 # Depuis la racine du projet
 vercel
@@ -65,6 +79,8 @@ Répondez aux questions :
 - **What's your project's name?** → `katymurr-client` (ou autre)
 - **In which directory is your code located?** → `./client`
 - **Want to override the settings?** → `N`
+
+**⚠️ Important** : Après le premier déploiement, allez dans **Settings → General → Root Directory** et définissez `client`
 
 ### 2.4 Configurer les Variables d'Environnement
 
